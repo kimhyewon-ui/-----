@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+.app_container .app_content .app_main_txt p {padding-bottom: 50px;}
+
+
+
+/* ==================== media Query =================== */
+
+
+@media screen and (max-width: 929px) {
+
+
+
+
+
+
+}

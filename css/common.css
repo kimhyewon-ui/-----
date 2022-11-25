@@ -1,0 +1,502 @@
+@charset "UTF-8";
+
+/* 공통 font */
+@font-face {
+    font-family: 'LINESeed';
+    font-style: normal;
+    font-weight: 300;
+    src: url(../font/LINESeedKR-Th.otf) format('embedded-opentype'),
+         url(../font/LINESeedKR-Th.woff) format('woff'),/* 최신브라우져 */
+         url(../font/LINESeedKR-Th.ttf) format('truetype');/* 기타브라우져 */
+}
+
+@font-face {
+    font-family: 'LINESeed';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../font/LINESeedKR-Rg.otf) format('embedded-opentype'),
+         url(../font/LINESeedKR-Rg.woff) format('woff'),
+         url(../font/LINESeedKR-Rg.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'LINESeed';
+    font-style: normal;
+    font-weight: 700;
+    src: url(../font/LINESeedKR-Bd.otf) format('embedded-opentype'),
+         url(../font/LINESeedKR-Bd.woff) format('woff'),
+         url(../font/LINESeedKR-Bd.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 300;
+    src: url(../font/Pretendard-Light.otf) format('embedded-opentype'),
+         url(../font/Pretendard-Light.woff) format('woff'),
+         url(../font/Pretendard-Light.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../font/Pretendard-Medium.otf) format('embedded-opentype'),
+         url(../font/Pretendard-Medium.woff) format('woff'),
+         url(../font/Pretendard-Medium.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    src: url(../font/Pretendard-Bold.otf) format('embedded-opentype'),
+         url(../font/Pretendard-Bold.woff) format('woff'),
+         url(../font/Pretendard-Bold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'AppleSDGothicNeo';
+    font-style: normal;
+    font-weight: 300;
+    src: url(../font/AppleSDGothicNeoL.otf) format('embedded-opentype'),
+         url(../font/AppleSDGothicNeoL.woff) format('woff'),
+         url(../font/AppleSDGothicNeoL.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'AppleSDGothicNeo';
+    font-style: normal;
+    font-weight: 500;
+    src: url(../font/AppleSDGothicNeoSB.otf) format('embedded-opentype'),
+         url(../font/AppleSDGothicNeoSB.woff) format('woff'),
+         url(../font/AppleSDGothicNeoSB.ttf) format('truetype');
+}
+
+
+@font-face {
+    font-family: 'AppleSDGothicNeo';
+    font-style: normal;
+    font-weight: 700;
+    src: url(../font/AppleSDGothicNeoB.otf) format('embedded-opentype'),
+         url(../font/AppleSDGothicNeoB.woff) format('woff'),
+         url(../font/AppleSDGothicNeoB.ttf) format('truetype');
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,address,code,em,img,strong,sub,sup,b,u,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figure,figcaption,footer,header,hgroup,menu,nav,section,main,audio,video {margin: 0; padding: 0;}
+
+button {cursor:pointer; border: none}
+fieldset,img {border: 0; vertical-align: top}
+ol,ul {list-style: none}
+address,em {font-style: normal}
+a {text-decoration: none; color: #212529;}
+iframe {overflow: hidden; border: 0}
+table {border-collapse: collapse; border-spacing: 0; width: 100%}
+h1,h2,h3,h4,h5,h6 {font-weight: normal; font-size: 100%}
+input,select,textarea,button {vertical-align: middle; margin: 0; padding: 0;
+border-radius: 0;}
+button,select {-webkit-appearance:none; appearance: none;}
+textarea {resize: none}
+body {line-height: 1.5; -webkit-text-size-adjust:none; -moz-text-size-adjust:none; -o-text-size-adjust:none;}
+body, input, button, select, textarea, table {
+    font-family: 'LINESeed','맑은 고딕','malgun gothic','돋움',dotum, sans-serif;
+    font-size: 16px;
+    color: #212529;}
+legend,caption,.blind,input[type="radio"],input[type="file"] {position: absolute; overflow: hidden; clip: rect(0 0 0 0); margin: -1px; width: 1px; height: 1px;}
+.clearfix:after {content: ''; display: block; clear:both;}
+input {outline: none;}
+input::placeholder {color: #9e9ea2; font-weight: normal; font-size: 14px;}
+
+
+/* 공통 btn */
+.next_btn {
+    position: absolute;
+    bottom: 80px;
+    left: 0;
+    width: 100%;
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+.green_bic_btn, .gray_bic_btn {
+    border: 1px solid;
+    border-radius: 6px;
+    background: #00b580;
+    color: #fff;
+    font-weight: 700;
+    width: 100%;
+    line-height: 51px;
+    font-size: 18px;
+}
+
+.gray_bic_btn {background: #b6b7ba}
+
+/* canvas small 크기 공통 */
+.bic_canvas {
+    width:300px; 
+    height:300px; 
+    background: #f1f5f7;
+}
+
+.small_canvas {
+    width: 140px;
+    height: 140px;
+    vertical-align: middle;
+    background: #f1f5f7;
+}
+
+
+
+/* PC main Version */
+#container {
+    background: url(../image/bg.png) no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+
+}
+
+.pc_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 600px;
+    width: 567px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+}
+
+body [data-pc-layout='pc_left_container'] {margin-left: -490px;}
+
+.pc_container .pc_titleBox {padding-left: 26px;}
+.pc_container .pc_titleBox .main_tit {
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: -0.62px;
+    margin-bottom: 20px;
+}
+
+.pc_container .pc_titleBox .main_txt {
+    font-size: 18px;
+    line-height: 1.67;
+}
+
+.pc_container .pc_swiper {
+    padding: 32px 0 0 0;
+    margin-left: -30px;
+    width: 100%;
+}
+
+.pc_container .swiper {
+    width: 350px;
+    height: 350px;
+    background: #fff;
+    box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.08), 0 0 4px 4px rgba(0, 0, 0, 0.02);
+    border-radius: 35px;
+}
+
+.pc_container .swiper-slide {overflow: hidden;}
+.pc_container .swiper-zoom-container {
+    align-items: end;
+    flex-direction: column;
+    text-align: left;
+}
+
+.pc_container .swiper-zoom-container .swiper_conBox {padding: 0 30px 0 44px;}
+.pc_container .swiper-zoom-container .img_txt {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.swiper-button-next, .swiper-button-prev {margin-top: 40px;}
+.pc_container .swiper-button-next {right: 60px;}
+.pc_container .swiper-button-prev {left: 0;}
+.pc_container .swiper-button-next:after, .swiper-button-prev:after {
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.pc_container .slide_arrow {
+    width: 45px;
+    height: 45px;
+    background: #56597a; 
+    border-radius: 45px;
+}
+
+.pc_container .pc_has {margin-top: 8px;}
+.pc_container .pc_has .hashtag {
+    width: 510px;
+    text-align: center;
+}
+
+.pc_container .pc_has .hashtag li {
+    display: inline-block;
+    margin: 14px 13px 0 0;
+}
+
+.pc_container .pc_has .hashtag li a {
+    display: inline-block;
+    padding: 6px 10px;
+    border: 2px solid #000;
+    background: #fff;
+    border-radius: 20px;
+    font-weight: 700;
+}
+
+/* app main Version */
+body [data-pc-layout='app_right_container'] {
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    margin-left: 15px;
+    max-width: 568px;
+    position: fixed;
+    display: flex;
+}
+
+.app_container .app_contentBox {
+    width: 428px;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow:  0 4px 40px 0 rgba(70, 51, 44, 0.1);;
+}
+
+.app_container .app_content {
+    padding: 180px 30px 0px;
+    box-sizing: border-box;
+}
+
+.app_container .app_content .app_main_logo img {
+    display: block;
+    margin: 0 auto;
+}
+
+.app_container .app_content .app_main_txt {
+    font-size: 22px;
+    line-height: 1.55;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.app_container .app_content .app_main_txt p {padding-bottom: 100px;}
+
+.app_container .app_content .app_main_txt button {
+    font-size: 14px;
+    text-decoration: underline;
+    background: none;
+} 
+
+.app_container .app_content .app_main_login {padding-top: 10px;}
+.app_container .app_content .app_main_login button {
+    width: 100%;
+    height: 47.6px;
+}
+
+.app_container .app_content .app_main_login button img {
+    height: 100%;
+}
+.app_container .app_content .app_main_login li {
+    margin-bottom: 12px;
+    background-color: #eee;
+}
+.app_container .app_content .app_main_login li:last-child {margin-bottom: 0;}
+
+.app_container .app_content .app_main_login img {width: 100%;}
+
+/* ============ header ==============*/
+#header {
+    width: 428px;
+    height: 54px;
+    border-radius: 40px 40px 0 0;
+    overflow: hidden; 
+    text-align: center;
+    padding: 0 16px;
+    box-sizing: border-box;
+}
+
+#header .btn_back {
+    display: inline-block;
+    width: 52px;
+    height: 54px;
+    background: #fff;
+    line-height: 54px;
+    float: left;
+}
+
+#header .btn_back img {vertical-align: middle;}
+
+#header .top_title {
+    line-height: 54px;
+    font-size: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    display: inline-block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#header .top_util {
+    display: inline-block;
+    height: 54px;
+    line-height: 50px;
+    vertical-align: top;
+    float: right;
+    margin-right: 20px;
+}
+
+#header .top_util .util {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+#header .top_util .util.info {width: 24px;}
+#header .top_util .util.tic {
+    width: 32px;
+    position: relative;
+}
+#header .top_util .util img {vertical-align: middle;}
+#header .top_util .util .tic_num {
+    position: absolute;
+    top: 2px;
+    left: 50%;
+    margin-left: -4px;
+    color: #fff;
+    font-size: 12.8px;
+}
+
+/* footer */
+/* 맨 밑에 위치하기 위해 app_control 클라스 따로 주고 기준 잡음 */
+.app_control {position: relative;}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+#footer .footer_inner {
+    height: 64.5px;
+    padding: 0 30px;
+    border-top: 1px solid #c5ced2;
+    text-align: center;
+}
+
+#footer .footer_inner li {
+    text-align: center;
+    display: inline-block;
+    width: 20%;
+    margin-right: 12px;
+}
+
+#footer .footer_inner li a {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    height: 64.5px;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+
+#footer .footer_inner li:last-child a img {
+    padding-top: 7px;
+}
+
+
+
+
+/* ==================== media Query =================== */
+
+@media screen and (max-width: 929px) {
+    #container {
+        height: auto; 
+        background: none;
+    }
+    .pc_container {display: none;}
+
+    body [data-pc-layout='app_right_container'] {
+        max-width: 820px;
+        min-width: 375px;
+        min-height: 600px;
+        left: auto;
+        margin: 0 auto;
+    }
+
+    .app_container {overflow-y: hidden;}
+    .app_container .app_contentBox {
+        width: 100%;
+        margin: 0 auto;
+        border: none;
+        border-radius: 0;
+    }
+
+    .app_container .app_content {
+        padding: 80px 30px 0px;
+    }
+
+
+    /* 스크롤은 되지만, 스크롤바 안보이게 */
+    .app_container .app_fileupload {
+        height: calc(100% - 200px) !important;
+        overflow-y: scroll;
+        -ms-overflow-style: none; /* 인터넷 익스플로러 */
+        scrollbar-width: none; /* 파이어폭스 */
+    }
+
+    .app_container .app_fileupload::-webkit-scrollbar {
+        display: none; /* 크롬, 사파리, 오페라, 엣지 */
+    }
+
+
+    .app_container .app_content .app_main_txt p {padding-bottom: 50px;}
+
+    /* 다음 버튼 공통 */
+    .app_container .app_contentBox .next_btn {
+        position: fixed;
+        left: 0;
+        width: 100%;
+        padding: 0 30px;
+        box-sizing: border-box;
+    }
+
+    /* 헤더 공통 */
+    #header {
+        width: 100%;
+        height: 54px;
+        border-radius: 0;
+    }
+
+    /* 푸터 공통 */
+    #footer {
+        position: fixed;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

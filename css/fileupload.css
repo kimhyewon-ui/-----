@@ -1,0 +1,246 @@
+@charset "UTF-8";
+
+.app_container .app_fileupload {
+    padding-top: 20px;
+    height: auto;
+} 
+
+.app_fileupload .file_con {cursor: default;}
+
+.app_fileupload .file_con>p, .app_fileupload .file_con>h3 {
+    text-align: center;
+    font-weight: 700;
+}
+
+.app_fileupload .file_con>p {
+    font-size: 14px;
+    color: #00b580;
+    letter-spacing: -0.28px;
+}
+
+.app_fileupload .file_con>h3 {
+    font-size: 18px;
+    color: #131415;
+    margin: 8px 0 20px;
+    
+}
+.app_fileupload .file_notice {
+    font-size: 13px;
+    color: #6d6d73;
+    letter-spacing: -0.23px;
+    line-height: 1.85;
+    
+}
+.app_fileupload .file_notice p:last-child {margin-top: 30px;}
+.app_fileupload ul {margin-left: 22px;}
+
+.app_fileupload .file_guid>p:first-child {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: -0.28px;
+    color: rgba(0,0,0,0.85);
+}
+
+.app_fileupload .file_guid>p:last-child {
+    font-size: 13px;
+    line-height: 1.54;
+    letter-spacing: -0.23px;
+    color: #6d6d73;
+    margin: 0 0 20px;
+}
+
+.app_fileupload .file_con>p:last-child {
+    font-size: 16px;
+    line-height: 1.63;
+    color: #131415;
+    margin-top: 20px;
+}
+
+/* 메인슬라이더 */
+.swiper-container {
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+}
+
+.file_swiper .swiper-container{
+    height: 200px;
+    background: #f1f5f7;
+    border-radius: 6px;
+}
+.file_swiper .swiper-slide>img {padding-top: 20px;}
+.file_swiper .swiper-slide:nth-child(2) img {padding-top: 0;}
+.file_swiper .swiper_imgwrap {margin-top: 50px;}
+.file_swiper .swiper_imgwrap img {margin-right: 5px;}
+.file_swiper .swiper_imgwrap img:last-child {margin-right: 0;}
+
+/* sub슬라이더 */
+.file_sub_swiper {margin-top: 20px;}
+.file_sub_swiper .swiper-pagination-bullet-active {
+    --swiper-theme-color: #00b580;
+} 
+
+.file_sub_swiper .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 50%;
+    margin-bottom: 75px;
+}
+
+
+/* ================ fileManin3 =============== */
+.bic_canvas {
+    width: 100%; 
+    height:300px; 
+    background: #f1f5f7;
+}
+
+.app_fileupload .file_box {
+    display: inline-block;
+    position: relative;
+    top: -210px;
+    left: 50%;
+    margin-left: -35px;
+}
+
+.app_fileupload .file_box>label {
+    width: 75px;
+    height: 75px;
+    cursor: pointer;
+}
+
+.app_fileupload .file_box>label img {
+    width: 75px;
+}
+
+.app_fileupload .file_box>span {
+    display: flex;
+    justify-content: center;
+    margin-top: 14px;
+    font-family: "AppleSDGothicNeo";
+    font-weight: 700;
+    color: #00b580;
+}
+
+.app_fileupload .file_next {margin-top: 10px;}
+
+
+/* ================ fileManin4 =============== */
+.check_wrap .canvas_box {
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    font-family
+}
+
+.check_wrap .check_box legend {
+    position: static;
+    overflow: auto;
+    clip: auto;
+    margin: 0;
+    width: auto;
+    height: auto;
+    font-size: 13px;
+    color: #161616;
+    padding-bottom: 12px
+}
+
+.check_wrap .check_box .age_wrap>span {
+    font-size: 13px;
+    color: #161616;
+    display: block;
+    margin: 24px 0 6px;
+}
+
+.check_wrap .age_wrap input[type="text"] {
+    outline: none;
+    border: 1px solid #e4e4e5;
+    border-radius: 6px;
+    padding: 12px;
+    width: 100%;
+    box-sizing: border-box;
+    line-height: 22px;
+    margin-bottom: 16px;
+}
+
+
+.check_wrap .gender_wrap, .check_wrap .check_box .family_wrap {
+    position: relative;
+    padding-bottom: 20px;
+} 
+
+.check_wrap input[type="checkbox"] {display: none;}
+.check_wrap input[type="checkbox"] + label {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #00b580;
+    border-radius: 8px;
+    margin-right: 90px;
+}
+.check_wrap input[type="checkbox"]:checked + label:after {
+    content: '✔';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    color: #00b580;
+}
+
+.check_wrap input[type="checkbox"] + label span {
+    position: absolute;
+    font-size: 14px;
+}
+
+.check_wrap .gender_wrap input[type="checkbox"] + label.man_check span {
+    top: 32px;
+    left: 33px;
+}
+
+.check_wrap .gender_wrap input[type="checkbox"] + label.woman_check span {
+    top: 32px;
+    left: 151px;
+} 
+
+.check_wrap .family_wrap input[type="checkbox"] + label {margin-right: 60px}
+.check_wrap .family_wrap input[type="checkbox"] + label:last-child {margin-right: 0px}
+.check_wrap .family_wrap input[type="checkbox"] + label span {top: 34px; left: 33px;}
+.check_wrap .family_wrap input[type="checkbox"] + label.dad_check span {left: 120px;}
+.check_wrap .family_wrap input[type="checkbox"] + label.mom_check span {left: 206px;}
+.check_wrap .family_wrap input[type="checkbox"] + label.bro_check span {left: 296px;}
+
+/* ================ fileManin5 =============== */
+.check_wrap h4 {
+    font-size: 14px;
+    letter-spacing: -0.25px;
+    text-align: center;
+    color: rgba(0,0,0,0.8);
+}
+
+.check_wrap .img_box {margin-top: 20px;}
+.check_wrap h3.bold_title {margin: 0 0 8px 0;}
+.check_wrap .rain_wrap legend {padding-top: 24px;}
+.check_wrap .rain_wrap input[type="checkbox"] + label span {top: 56px !important}
+
+
+
+
+/* ==================== media Query =================== */
+
+
+@media screen and (max-width: 929px) {
+    .file_swiper .swiper-container {width: 100%;}
+    .file_sub_swiper .swiper-container {width: 100%;} 
+
+    /* .file_sub_swiper .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+        bottom: 50%;
+        margin-bottom: 35px;
+    }
+     */
+
+
+
+    #imageCanvas {width: 100%;}
+
+    .check_wrap #imageCanvas {width: 140px;}
+
+
+}
